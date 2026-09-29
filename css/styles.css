@@ -582,6 +582,37 @@ a.bar-row:focus-visible { outline: 2px solid var(--saru-500); outline-offset: 2p
 .item-qty { display: none; }
 .table-note { margin-top: 0.625rem; font-size: 0.75rem; color: var(--saru-400); }
 
+/* Aviso: gasto por día de uso vs. fecha de compra */
+.notice {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--saru-300);
+  border-left: 4px solid var(--saru-500);
+  border-radius: 1rem;
+  background: var(--white);
+  font-size: 0.9375rem;
+  color: var(--saru-700);
+}
+.notice-title { margin-bottom: 0.25rem; font-family: var(--font-display); font-size: 1.125rem; font-weight: 700; color: var(--saru-800); }
+.notice strong { color: var(--saru-800); }
+.summary-sub { font-size: 0.8125rem; font-weight: 500; color: var(--saru-400); }
+.section-lead { margin: -0.5rem 0 1.25rem; font-size: 0.9375rem; color: var(--saru-600); }
+.buy-by {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: -0.5rem 0 1.5rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.75rem;
+  background: var(--saru-50);
+  font-size: 0.875rem;
+  color: var(--saru-700);
+}
+.buy-by .icon { width: 1.125rem; height: 1.125rem; flex-shrink: 0; margin-top: 0.125rem; color: var(--saru-500); }
+.buy-by + .block-label { margin-top: 0; }
+
 /* =========================================================
    PENDIENTES Y TOTAL GENERAL
    ========================================================= */

@@ -23,13 +23,18 @@ const pct = (n, total) => `${((n / total) * 100).toFixed(1).replace('.', ',')}%`
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c])
 const sum = (list) => list.reduce((acc, c) => acc + c.total, 0)
 
+// Fechas: "lunes 12 de octubre"
+const fechaLarga = (d) => d.toLocaleDateString('es-CR', { weekday: 'long', day: 'numeric', month: 'long' }).replace(',', '')
+const limiteCompra = ([y, m, d]) => new Date(y, m - 1, d - ANTICIPACION_DIAS)
+
 // Solo cuentan las compras con precio; las demás van a "Pendientes"
 const compras = COMPRAS.filter((c) => c.precio != null).map((c) => ({ ...c, total: c.cant * c.precio }))
 const pendientes = COMPRAS.filter((c) => c.precio == null)
 const TOTAL = sum(compras)
 
-const porDia = DIAS.map((d) => ({ ...d, compras: compras.filter((c) => c.dia === d.id) }))
+const porDia = DIAS.map((d) => ({ ...d, compras: compras.filter((c) => c.dia === d.id), limite: limiteCompra(d.fecha) }))
 porDia.forEach((d) => (d.total = sum(d.compras)))
+const PRIMER_LIMITE = new Date(Math.min(...porDia.map((d) => d.limite)))
 
 const porRubro = Object.entries(CATEGORIAS).map(([id, cat]) => {
   const lista = compras.filter((c) => c.cat === id)
@@ -39,6 +44,8 @@ const porRubro = Object.entries(CATEGORIAS).map(([id, cat]) => {
 const comprasDeActividad = (id) => COMPRAS.filter((c) => c.para && c.para.includes(id))
 
 document.querySelectorAll('[data-total]').forEach((el) => (el.textContent = colones(TOTAL)))
+document.querySelectorAll('[data-limite]').forEach((el) => (el.textContent = fechaLarga(PRIMER_LIMITE)))
+document.querySelectorAll('[data-semanas]').forEach((el) => (el.textContent = `${ANTICIPACION_DIAS / 7} semanas`))
 
 // ---------- Cifras clave ----------
 const conPresupuesto = ACTIVIDADES.filter((a) => comprasDeActividad(a.id).length)
@@ -90,13 +97,15 @@ function tarjetaActividad(a) {
         <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>${esc(a.hora)}</span></p>
         <h4 class="activity-title">${esc(a.titulo)}</h4>
         <p class="activity-covers"><span>Incluye:</span> ${esc(cubre)}</p>
+        ${a.nota ? `<p class="activity-covers"><span>Nota:</span> ${esc(a.nota)}</p>` : ''}
       </div>
     </article>`
 }
 
 function filaCompra(c) {
   const fecha = c.fecha ? ` <span class="date-flag">${c.fecha}</span>` : ''
-  const nota = c.nota ? `<small class="item-note">${esc(c.nota)}</small>` : ''
+  const nota = (c.uso ? `<small class="item-note"><strong>Se usa en:</strong> ${esc(c.uso)}</small>` : '')
+    + (c.nota ? `<small class="item-note">${esc(c.nota)}</small>` : '')
   return `
     <tr>
       <td class="col-item" data-label="Compra"><span class="item-name">${esc(c.item)}${fecha}</span><small class="item-qty">${c.cant} × ${colones(c.precio)}</small>${nota}</td>
@@ -135,7 +144,6 @@ document.getElementById('dias').innerHTML = porDia.map((d) => {
   const actividades = ACTIVIDADES.filter((a) => a.dia === d.id)
   const conCompras = actividades.filter((a) => comprasDeActividad(a.id).length)
   const sinCompras = actividades.filter((a) => !comprasDeActividad(a.id).length)
-  const fechas31 = d.compras.some((c) => c.fecha)
 
   return `
     <section class="day-panel reveal" id="dia-${d.id}" aria-labelledby="t-${d.id}">
@@ -152,6 +160,9 @@ document.getElementById('dias').innerHTML = porDia.map((d) => {
         </div>
       </header>
 
+      <p class="buy-by"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg>
+        <span>${d.id === 'semana' ? 'Compras y contrataciones de uso general' : 'Compras de este día'}: realizar a más tardar el <strong>${fechaLarga(d.limite)}</strong> (${ANTICIPACION_DIAS / 7} semanas antes)</span></p>
+
       ${conCompras.length ? `
         <h4 class="block-label">Actividades con presupuesto</h4>
         <div class="activities-grid">${conCompras.map(tarjetaActividad).join('')}</div>` : ''}
@@ -159,12 +170,11 @@ document.getElementById('dias').innerHTML = porDia.map((d) => {
       ${sinCompras.length ? `
         <div class="also">
           <h4 class="block-label">${conCompras.length ? 'También este día' : 'Actividades del día'} <span>(sin presupuesto asignado)</span></h4>
-          <ul class="chip-list">${sinCompras.map((a) => `<li>${esc(a.titulo)} <span>· ${esc(a.hora)}</span></li>`).join('')}</ul>
+          <ul class="chip-list">${sinCompras.map((a) => `<li>${esc(a.titulo)}${a.hora ? ` <span>· ${esc(a.hora)}</span>` : ''}</li>`).join('')}</ul>
         </div>` : ''}
 
       <h4 class="block-label">Desglose de compras</h4>
       ${tablaDia(d)}
-      ${fechas31 ? '<p class="table-note">31/10: compra registrada con fecha del sábado 31 en la hoja de cálculo; se incluye en el cierre del viernes.</p>' : ''}
     </section>`
 }).join('')
 
