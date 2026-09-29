@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semana U 2026 · ASOECAS · Campus Sarapiquí</title>
+  <meta name="description" content="Cronograma de Semana U 2026 (26 al 30 de octubre en el Campus Sarapiquí)." />
+  <meta name="theme-color" content="#FDF8F3" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="img/saru.png" />
+  <link rel="apple-touch-icon" href="img/saru.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Íconos (Heroicons outline). Se usan con <svg><use href="#i-nombre"/></svg> -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-clock" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></symbol>
+  </svg>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#inicio" class="header-brand">
+        <div class="header-logo">
+          <img src="img/logo.png" alt="ASOECAS Campus Sarapiquí" />
+        </div>
+        <div class="header-text">
+          <p class="header-title">Campus Sarapiquí</p>
+          <span class="header-date">26 – 30 de octubre 2026</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon icon-menu" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <img src="img/hojas.png" alt="" aria-hidden="true" class="mobile-menu-leaves" />
+      <nav aria-label="Menú móvil">
+        <a href="#inicio">Inicio</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section id="inicio" class="hero">
+      <img src="img/hojas.png" alt="" aria-hidden="true" class="hero-leaves hero-leaves-left" />
+      <img src="img/hojas.png" alt="" aria-hidden="true" class="hero-leaves hero-leaves-right" />
+
+      <div class="container hero-inner">
+        <div class="hero-grid">
+          <div class="hero-text fade-in">
+            <h1 class="hero-title">Semana U <span class="accent">2026</span></h1>
+            <div class="hero-actions">
+              <a href="#cronograma" class="btn btn-primary">
+                Explorar cronograma
+                <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+              <a href="#nosotros" class="btn btn-ghost">Conocé a Sarú</a>
+            </div>
+          </div>
+
+          <div class="hero-visual fade-in">
+            <div class="hero-logo-wrap">
+              <div class="hero-ring hero-ring-1"></div>
+              <div class="hero-ring hero-ring-2"></div>
+              <div class="hero-logo">
+                <img src="img/saru.png" alt="Sarú - Mascota Semana U 2026" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PILARES ========== -->
+    <section class="pillars">
+      <div class="container pillars-grid">
+        <div class="pillar reveal delay-1">
+          <div class="pillar-icon"><svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#i-book"/></svg></div>
+          <h3>Aprendizaje</h3>
+          <p>Hackatones, talleres y competencias que impulsan tu crecimiento.</p>
+        </div>
+        <div class="pillar reveal delay-2">
+          <div class="pillar-icon"><svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#i-users"/></svg></div>
+          <h3>Comunidad</h3>
+          <p>Un espacio de encuentro seguro para toda la comunidad universitaria.</p>
+        </div>
+        <div class="pillar reveal delay-3">
+          <div class="pillar-icon"><svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#i-bolt"/></svg></div>
+          <h3>Deporte &amp; Energía</h3>
+          <p>Torneos y actividades que mueven el campus.</p>
+        </div>
+        <div class="pillar reveal delay-4">
+          <div class="pillar-icon"><svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><use href="#i-smile"/></svg></div>
+          <h3>Celebración</h3>
+          <p>Fiestas, fogatas, comparsas y noches de talento para cerrar con broche de oro.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CRONOGRAMA ========== -->
+    <section id="cronograma" class="schedule">
+      <div class="container">
+        <div class="schedule-heading reveal">
+          <img src="img/hojas.png" alt="" aria-hidden="true" class="schedule-heading-leaves" />
+          <h2 class="section-title">Cronograma de Actividades</h2>
+        </div>
+
+        <div class="day-filter" role="group" aria-label="Filtrar por día">
+          <button type="button" class="day-btn" data-filter="all" aria-pressed="true">Todos</button>
+          <button type="button" class="day-btn" data-filter="lu" aria-pressed="false">Lunes 26</button>
+          <button type="button" class="day-btn" data-filter="ma" aria-pressed="false">Martes 27</button>
+          <button type="button" class="day-btn" data-filter="mi" aria-pressed="false">Miércoles 28</button>
+          <button type="button" class="day-btn" data-filter="ju" aria-pressed="false">Jueves 29</button>
+          <button type="button" class="day-btn" data-filter="vi" aria-pressed="false">Viernes 30</button>
+        </div>
+
+        <!--
+          Cada tarjeta:
+          - data-day: lu | ma | mi | ju | vi (para el filtro)
+          - style="object-position: X% Y%" en la foto ajusta el encuadre
+          - .activity-desc es el texto que aparece en el modal
+        -->
+        <div id="actividades" class="activities-grid" aria-live="polite">
+
+          <!-- Lunes 26 -->
+          <article class="activity-card" data-day="lu">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/piscina.jpg" alt="" loading="lazy" style="object-position: 50% 45%" /></div>
+                <span class="day-badge">Lunes 26</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>10:00 AM – 4:00 PM</span></p>
+                <h3 class="activity-title">Piscina</h3>
+                <p class="activity-desc">Actividades acuáticas y recreación en la piscina del campus durante todo el día.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="lu">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/escondidas.jpg" alt="" loading="lazy" style="object-position: 50% 70%" /></div>
+                <span class="day-badge">Lunes 26</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>6:00 PM · 10:00 PM</span></p>
+                <h3 class="activity-title">Escondidas</h3>
+                <p class="activity-desc">Juego clásico de escondidas por todo el campus. ¡Diversión garantizada!</p>
+              </div>
+            </button>
+          </article>
+
+          <!-- Martes 27 -->
+          <article class="activity-card" data-day="ma">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/hackaton.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Martes 27</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>7:00 AM – 3:00 PM</span></p>
+                <h3 class="activity-title">Hackaton</h3>
+                <p class="activity-desc">Jornada intensiva de programación y creación de soluciones innovadoras.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="ma">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/ciclistica.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Martes 27</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>7:00 AM · 12:00 MD</span></p>
+                <h3 class="activity-title">Ciclística</h3>
+                <p class="activity-desc">Ruta ciclista por los alrededores del Campus Sarapiquí.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="ma">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/totebag.jpg" alt="" loading="lazy" style="object-position: 50% 65%" /></div>
+                <span class="day-badge">Martes 27</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>2:00 PM</span></p>
+                <h3 class="activity-title">Pintemos nuestro Totebag</h3>
+                <p class="activity-desc">Actividad creativa para personalizar tu totebag oficial de Semana U.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="ma">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/mecanografia.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Martes 27</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>4:00 PM</span></p>
+                <h3 class="activity-title">Competencia de Mecanografía</h3>
+                <p class="activity-desc">Poné a prueba tu velocidad y precisión en el teclado.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="ma">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/futbol.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Martes 27</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>5:00 PM · 8:00 PM</span></p>
+                <h3 class="activity-title">Campeonato de Fútbol</h3>
+                <p class="activity-desc">Partidos del campeonato de fútbol de la Semana U.</p>
+              </div>
+            </button>
+          </article>
+
+          <!-- Miércoles 28 -->
+          <article class="activity-card" data-day="mi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/cuadrangular.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Miércoles 28</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>8:00 AM · 12:00 MD · 5:00 PM</span></p>
+                <h3 class="activity-title">Cuadrangular Alianza Universitaria</h3>
+                <p class="activity-desc">Torneo cuadrangular deportivo de la Alianza Universitaria.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="mi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/feria.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Miércoles 28</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>10:00 AM · 11:00 AM · 4:00 PM</span></p>
+                <h3 class="activity-title">Feria de Emprendimiento</h3>
+                <p class="activity-desc">Exposición y venta de proyectos y emprendimientos de la comunidad universitaria.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="mi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/inflables.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Miércoles 28</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>1:00 PM – 5:00 PM</span></p>
+                <h3 class="activity-title">Inflables</h3>
+                <p class="activity-desc">Inflables para disfrutar durante la tarde en el campus.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="mi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/videojuegos.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Miércoles 28</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>5:00 PM</span></p>
+                <h3 class="activity-title">Torneo de Videojuegos</h3>
+                <p class="activity-desc">Competencia de videojuegos para demostrar tus habilidades.</p>
+              </div>
+            </button>
+          </article>
+
+          <!-- Jueves 29 -->
+          <article class="activity-card" data-day="ju">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/futbolin.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Jueves 29</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>9:00 AM · 12:00 PM</span></p>
+                <h3 class="activity-title">Torneo de Futbolín</h3>
+                <p class="activity-desc">Torneo de futbolín para todos los niveles. ¡Armá tu equipo, inscribite y jugá!</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="ju">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/ping-pong.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Jueves 29</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>9:00 AM · 12:00 PM</span></p>
+                <h3 class="activity-title">Torneo de Ping Pong</h3>
+                <p class="activity-desc">Torneo de ping pong para todos los niveles. ¡Inscribite y demostrá tu mejor saque!</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="ju">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/feuna.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Jueves 29</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>1:00 PM</span></p>
+                <h3 class="activity-title">Espacio FEUNA</h3>
+                <p class="activity-desc">Espacio de la Federación de Estudiantes de la UNA para la comunidad estudiantil.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="ju">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/plantas-invasoras.jpg" alt="" loading="lazy" style="object-position: 50% 55%" /></div>
+                <span class="day-badge">Jueves 29</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>3:00 PM</span></p>
+                <h3 class="activity-title">Taller de Plantas Invasoras</h3>
+                <p class="activity-desc">Taller práctico sobre las plantas invasoras y el entorno natural de Sarapiquí.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="ju">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/fiesta.jpg" alt="" loading="lazy" style="object-position: 50% 30%" /></div>
+                <span class="day-badge">Jueves 29</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>Tarde y noche</span></p>
+                <h3 class="activity-title">Fiesta de Cierre de Semana U</h3>
+                <p class="activity-desc">El gran cierre. Música, baile y celebración con toda la comunidad.</p>
+              </div>
+            </button>
+          </article>
+
+          <!-- Viernes 30 -->
+          <article class="activity-card" data-day="vi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/fiscalia.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Viernes 30</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>8:00 AM – 11:00 AM</span></p>
+                <h3 class="activity-title">Taller Fiscalía en contra del Hostigamiento Sexual</h3>
+                <p class="activity-desc">Taller impartido por la Fiscalía sobre prevención y denuncia del hostigamiento sexual.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="vi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/globos.jpg" alt="" loading="lazy" style="object-position: 50% 65%" /></div>
+                <span class="day-badge">Viernes 30</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>9:00 AM – 11:00 AM</span></p>
+                <h3 class="activity-title">Competencia de Globos</h3>
+                <p class="activity-desc">Diversión y competencia amistosa con globos. Ideal para empezar el día.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="vi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/bingo.jpg" alt="" loading="lazy" style="object-position: 50% 40%" /></div>
+                <span class="day-badge">Viernes 30</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>2:00 PM</span></p>
+                <h3 class="activity-title">Bingo</h3>
+                <p class="activity-desc">Clásico bingo universitario con premios y mucha emoción.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="vi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/voley.jpg" alt="" loading="lazy" style="object-position: 50% 70%" /></div>
+                <span class="day-badge">Viernes 30</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>2:00 PM</span></p>
+                <h3 class="activity-title">Campeonato de Vóley</h3>
+                <p class="activity-desc">Partidos de vóley para cerrar la semana deportiva con fuerza.</p>
+              </div>
+            </button>
+          </article>
+
+          <article class="activity-card" data-day="vi">
+            <button type="button" aria-haspopup="dialog">
+              <div class="activity-media">
+                <div class="media-fill"><img src="img/actividades/fogata.jpg" alt="" loading="lazy" /></div>
+                <span class="day-badge">Viernes 30</span>
+              </div>
+              <div class="activity-body">
+                <p class="activity-time"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg><span>6:00 PM</span></p>
+                <h3 class="activity-title">La Fogata</h3>
+                <p class="activity-desc">El gran final de la Semana U alrededor de la fogata, con Noche de Talento para que la comunidad universitaria muestre su talento y una Comparsa con música y color para despedir la semana. ¡Vení a apoyar!</p>
+              </div>
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MODAL DE ACTIVIDAD (lo llena main.js) ========== -->
+    <dialog id="activity-modal" class="activity-modal" aria-labelledby="activity-modal-title">
+      <div class="modal-media">
+        <div class="media-fill"><img id="modal-img" src="" alt="" /></div>
+        <span id="modal-day" class="day-badge"></span>
+        <button type="button" class="modal-close" data-close aria-label="Cerrar">
+          <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-time">
+          <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-clock"/></svg>
+          <span id="modal-time"></span>
+        </div>
+        <h3 id="activity-modal-title" class="modal-title"></h3>
+        <p id="modal-desc" class="modal-desc"></p>
+        <div class="modal-footer">
+          <p class="modal-note">* Horario provisional</p>
+          <button type="button" class="modal-ok" data-close>Entendido</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ========== SOBRE SARÚ ========== -->
+    <section id="nosotros" class="about">
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <p class="kicker">Nuestra mascota</p>
+          <h2 class="section-title">Sarú lleva el Sello UNA</h2>
+          <p>
+            Este logo representa la primera Semana U de Sarú y su vínculo con el Campus Sarapiquí. La sudadera
+            universitaria lo representa como un universitario más, simbolizando que todos somos parte de este campus
+            y compartimos un camino de sueños, esfuerzo y aprendizaje.
+          </p>
+          <p class="last">
+            A la vez, refleja el respeto, el cariño y el compromiso con construir juntos un Campus Sarapiquí que sea
+            un espacio de encuentro y una zona segura para todos.
+          </p>
+          <div class="u-row">
+            <div class="u-circle">U</div>
+            <div>
+              <strong>La “U” de Semana U</strong>
+              <span>Integrada de forma minimalista a partir de la cola de Sarú</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal delay-2">
+          <div class="about-photo-wrap">
+            <div class="about-photo">
+              <img src="img/saru.png" alt="Sarú" loading="lazy" />
+            </div>
+            <div class="about-tag">ASOECAS 2026</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-columns">
+        <div class="footer-identity">
+          <div class="footer-brand">
+            <p class="footer-brand-title">Semana U 2026</p>
+            <p class="footer-brand-sub">ASOECAS · Campus Sarapiquí</p>
+            <p class="footer-brand-date">26 – 30 de octubre 2026</p>
+          </div>
+          <p>Construyendo comunidad, impulsando sueños y celebrando la vida universitaria en el corazón de Sarapiquí.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#cronograma">Cronograma</a></li>
+            <li><a href="#actividades">Actividades</a></li>
+            <li><a href="#nosotros">Sobre Sarú</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <address>
+            Universidad Nacional<br />
+            Campus Sarapiquí<br />
+            <a href="mailto:asoecas@una.cr">asoecas@una.cr</a><br />
+            <a href="tel:+50625626056">+506 2562 6056</a>
+          </address>
+          <div class="footer-social">
+            <a href="https://www.tiktok.com/@asosarapiqui?_r=1&amp;_t=ZS-9A0gHrRqOSz" target="_blank" rel="noreferrer">TikTok · @asosarapiqui</a>
+            <a href="https://www.instagram.com/asoecas_sarapiqui?stkn=MWw1NWtla3RvM3k2Nw==" target="_blank" rel="noreferrer">Instagram · @asoecas_sarapiqui</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ASOECAS · Semana U · Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

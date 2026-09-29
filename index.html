@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presupuesto Semana U 2026 · ASOECAS · Campus Sarapiquí</title>
+  <meta name="description" content="Presupuesto por día de las actividades de Semana U 2026 (26 al 30 de octubre en el Campus Sarapiquí)." />
+  <meta name="theme-color" content="#FDF8F3" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="img/saru.png" />
+  <link rel="apple-touch-icon" href="img/saru.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Íconos (Heroicons outline). Se usan con <svg><use href="#i-nombre"/></svg> -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-clock" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></symbol>
+  </svg>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#inicio" class="header-brand">
+        <div class="header-logo">
+          <img src="img/logo.png" alt="ASOECAS Campus Sarapiquí" />
+        </div>
+        <div class="header-text">
+          <p class="header-title">Campus Sarapiquí</p>
+          <span class="header-date">26 – 30 de octubre 2026</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#resumen">Resumen</a>
+        <a href="#por-dia">Por día</a>
+        <a href="#pendientes">Pendientes</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="icon icon-menu" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <img src="img/hojas.png" alt="" aria-hidden="true" class="mobile-menu-leaves" />
+      <nav aria-label="Menú móvil">
+        <a href="#inicio">Inicio</a>
+        <a href="#resumen">Resumen</a>
+        <a href="#por-dia">Por día</a>
+        <a href="#pendientes">Pendientes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section id="inicio" class="hero">
+      <img src="img/hojas.png" alt="" aria-hidden="true" class="hero-leaves hero-leaves-left" />
+      <img src="img/hojas.png" alt="" aria-hidden="true" class="hero-leaves hero-leaves-right" />
+
+      <div class="container hero-inner">
+        <div class="hero-grid">
+          <div class="hero-text fade-in">
+            <p class="kicker">Presupuesto de actividades</p>
+            <h1 class="hero-title">Semana U <span class="accent">2026</span></h1>
+            <div class="hero-total">
+              <span class="hero-total-label">Inversión total de la semana</span>
+              <strong class="hero-total-value" data-total></strong>
+            </div>
+            <div class="hero-actions">
+              <a href="#por-dia" class="btn btn-primary">
+                Ver presupuesto por día
+                <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+              <a href="#resumen" class="btn btn-ghost">Resumen</a>
+            </div>
+          </div>
+
+          <div class="hero-visual fade-in">
+            <div class="hero-logo-wrap">
+              <div class="hero-ring hero-ring-1"></div>
+              <div class="hero-ring hero-ring-2"></div>
+              <div class="hero-logo">
+                <img src="img/saru.png" alt="Sarú - Mascota Semana U 2026" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CIFRAS CLAVE (lo llena main.js) ========== -->
+    <section class="pillars">
+      <div class="container pillars-grid" id="cifras"></div>
+    </section>
+
+    <!-- ========== RESUMEN ========== -->
+    <section id="resumen" class="summary">
+      <div class="container">
+        <div class="schedule-heading reveal">
+          <img src="img/hojas.png" alt="" aria-hidden="true" class="schedule-heading-leaves" />
+          <h2 class="section-title">Resumen del Presupuesto</h2>
+        </div>
+
+        <div class="summary-grid">
+          <div class="summary-card reveal delay-1">
+            <h3 class="summary-title">Gasto por día</h3>
+            <ul class="bar-list" id="bars-dias"></ul>
+          </div>
+          <div class="summary-card reveal delay-2">
+            <h3 class="summary-title">Gasto por rubro</h3>
+            <ul class="bar-list" id="bars-rubros"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRESUPUESTO POR DÍA (lo llena main.js) ========== -->
+    <section id="por-dia" class="schedule">
+      <div class="container">
+        <div class="schedule-heading reveal">
+          <img src="img/hojas.png" alt="" aria-hidden="true" class="schedule-heading-leaves" />
+          <h2 class="section-title">Actividades y Presupuesto por Día</h2>
+        </div>
+
+        <nav class="day-filter" id="day-nav" aria-label="Ir a un día"></nav>
+
+        <div id="dias"></div>
+      </div>
+    </section>
+
+    <!-- ========== PENDIENTES ========== -->
+    <section id="pendientes" class="pending">
+      <div class="container">
+        <div class="pending-card reveal">
+          <div class="pending-icon"><svg class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#i-alert"/></svg></div>
+          <div>
+            <h2 class="pending-title">Pendientes de cotizar</h2>
+            <p class="pending-text">Estas compras están planificadas pero todavía no tienen precio, por lo que no suman al total.</p>
+            <ul class="chip-list" id="pendientes-lista"></ul>
+          </div>
+        </div>
+
+        <div class="grand-total reveal">
+          <span>Total general Semana U 2026</span>
+          <strong data-total></strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-columns">
+        <div class="footer-identity">
+          <div class="footer-brand">
+            <p class="footer-brand-title">Semana U 2026</p>
+            <p class="footer-brand-sub">ASOECAS · Campus Sarapiquí</p>
+            <p class="footer-brand-date">26 – 30 de octubre 2026</p>
+          </div>
+          <p>Construyendo comunidad, impulsando sueños y celebrando la vida universitaria en el corazón de Sarapiquí.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#resumen">Resumen</a></li>
+            <li><a href="#por-dia">Presupuesto por día</a></li>
+            <li><a href="#pendientes">Pendientes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <address>
+            Universidad Nacional<br />
+            Campus Sarapiquí<br />
+            <a href="mailto:asoecas@una.cr">asoecas@una.cr</a><br />
+            <a href="tel:+50625626056">+506 2562 6056</a>
+          </address>
+          <div class="footer-social">
+            <a href="https://www.tiktok.com/@asosarapiqui?_r=1&amp;_t=ZS-9A0gHrRqOSz" target="_blank" rel="noreferrer">TikTok · @asosarapiqui</a>
+            <a href="https://www.instagram.com/asoecas_sarapiqui?stkn=MWw1NWtla3RvM3k2Nw==" target="_blank" rel="noreferrer">Instagram · @asoecas_sarapiqui</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ASOECAS · Semana U · Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/presupuesto.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
